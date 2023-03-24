@@ -1,5 +1,3 @@
-Sure, here's an example of what the README file for the "Phishing Site Detector" Chrome extension might look like:
-
 # Phishing Site Detector
 
 The "Phishing Site Detector" is a Chrome extension that checks if the current site is similar to the specified target site URL. This extension is particularly useful for detecting phishing sites that attempt to steal your personal information by posing as legitimate websites.
