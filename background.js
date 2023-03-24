@@ -39,7 +39,6 @@ async function isPhishing(domain) {
   return new Promise(resolve => {
     chrome.storage.sync.get("domains", function(result) {
       let domains = result.domains || [];
-      console.log(domains, domain);
 
       for (let i = 0; i < domains.length; i++) {
         let threatbookDomain = domains[i];
@@ -47,7 +46,9 @@ async function isPhishing(domain) {
           resolve(false);
           return;
         }
-        if (getLevenshteinDistance(domain, threatbookDomain) <= 2) {
+      }
+      for (let i = 0; i < domains.length; i++) {
+        if (getLevenshteinDistance(domain, threatbookDomain) <= 3) {
           resolve(true);
           return;
         }
