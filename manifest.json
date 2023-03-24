@@ -17,7 +17,7 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": ["activeTab",  "tabs", "storage", "host"],
+  "permissions": ["activeTab",  "tabs", "storage"],
   "background": {
     "service_worker": "background.js"
   },

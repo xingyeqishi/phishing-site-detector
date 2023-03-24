@@ -48,6 +48,7 @@ async function isPhishing(domain) {
         }
       }
       for (let i = 0; i < domains.length; i++) {
+        let threatbookDomain = domains[i];
         if (getLevenshteinDistance(domain, threatbookDomain) <= 3) {
           resolve(true);
           return;
